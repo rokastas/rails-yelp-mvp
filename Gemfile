@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+gem 'faker', '~> 3.2'
+
 gem "simple_form"
 
 ruby "3.1.2"

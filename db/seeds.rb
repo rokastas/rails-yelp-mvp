@@ -7,3 +7,13 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+categories = %w[chinese italian japanese french belgian]
+
+9.times do
+  restaurant = Restaurant.new(
+    name: Faker::Restaurant.name,
+    category: categories[rand(0..4)],
+    address: Faker::Address.street_address
+  )
+  restaurant.save
+end
