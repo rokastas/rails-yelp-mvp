@@ -1,0 +1,22 @@
+<div class="page">
+  <div class="navbar bg-light">
+    <h1 class="navbar-brand mx-3">Restaurants</h1>
+    <p class="nav-link text-secondary"><%= link_to '+ New Restaurant', new_restaurant_path %></p>
+  </div>
+  <div class="d-flex justify-content-center">
+    <div class="row row-cols-1 row-cols-md-3 w-75 mt-3">
+      <% @restaurants.each do |restaurant| %>
+        <div class="col mb-4 d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="https://cwdaust.com.au/wpress/wp-content/uploads/2015/04/placeholder-restaurant.png" alt="Card image cap">
+              <div class="card-body">
+                <h3 class="text-light"><%= link_to restaurant.name, restaurant_path(restaurant) %></h3>
+                <p px-0 py-0><%= restaurant.category %></p>
+                <p p-0><%= restaurant.address %></p>
+              </div>
+            </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
